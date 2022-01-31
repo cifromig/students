@@ -50,6 +50,7 @@
   
   .container-header_0 {
     width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -81,16 +82,17 @@
   .trend-all {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:space-between;
    
   }
  
   .trend {
     display: flex;
-    width: calc(25% - 10px);
+    width: calc(25% - 5px);
 
     min-height: 350px;
-    margin: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
     background-size: cover;
     flex-wrap: nowrap;
 
@@ -101,10 +103,10 @@
     position: relative;
   }
 
-.trend:nth-:first-child {
-    margin-left: 0px;
-}
-.trend:nth-:end-child {
+/* .trend:first-child {
+    margin-left: 0px; */
+
+.trend:last-child {
     margin-right: 0px;
 }
 
@@ -142,7 +144,7 @@
     align-items: flex-end;
   }
 
-  .trend-stroca-centr .h3-post {
+  .trend-stroca-centr .h2-post {
       margin-top: 40px;
       font-size: 20px;
   }
@@ -243,13 +245,16 @@
 
     margin-left: auto;
     margin-right: auto;
+
+    /* background-color: aquamarine; */
  
    /*  background-color: pink; */
   }
   
   .mains-left {
     display: flex;
-    width: calc(70% - 20px);/*780px */
+    width: calc(100% - 290px);/*780px */
+    /* width: calc(70% - 20px);780px */
     /* min-width: 380px; */
    /* background-color: blue; */
   }
@@ -373,7 +378,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 30%;  /*270px*/
+    /* width: 30%;  270px */
+    width: 270px;
+
     
   }
   
@@ -399,7 +406,7 @@
       background-color: white;
   }
   
-  .h3-post {
+  .h2-post {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -412,7 +419,7 @@
     /* background-color: blue; */
   }
   
-  .h3-post::after {
+  .h2-post::after {
     content: "";
     display: flex;
     flex-wrap: wrap;
@@ -632,22 +639,27 @@
 
 
   .katalog {
-      margin-top: 50px;
+      margin-top: 40px;
     width: 100%;
  
   }
 
-  .stroka-katalog .h3-post {
+  .stroka-katalog .h2-post {
     font-size: 20px;
   }
+
+  .stroka-katalog .h2-post::after {
+    margin-bottom: -20px;
+  }
+
   .katalog-bloks {
     display: flex;
     justify-content: space-between;
-    
+    /* align-items: stretch;
+    align-self: stretch;
+    justify-self:stretch;
+    justify-items: stretch; */
 }
-
-   
-
 
 .products-img-size {
     width: 100%;
@@ -661,8 +673,13 @@
     width: 310px;
     margin-left: 20px;
     margin-right: 20px;
+    padding-top: 50px;
+    /* background-color: aqua; */
+    position: relative;
 
 }
+
+
 
 
 .products-text-border {
@@ -673,22 +690,36 @@
     position: relative;
     z-index: 2;
     margin-top: 15px;
+  /* background-color: cadetblue; */
  
 }
 
-.products-text-border::after {
- 
-    content: "";
+.products-blok::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: 230px;
+  height: calc(100% - 210px);
+  /* min-height:  250px; */
+  left: -20px;
+  width: calc(100% + 35px);
+  border: 3px solid #b59f5b;
+  z-index: 1;
+}
+
+/* .products-text-border::after { 
+     content: "";
     display: flex;
     position: absolute;
     top: -50px;
     left: -20px;
-    height: calc(100% + 40px);
+    height: calc(100% + 80px);
     min-height:  250px;
     width: calc(100% + 35px);
     border: 3px solid #b59f5b;
     z-index: -1;
-}
+   
+} */
 
 
 .products-link {
@@ -736,6 +767,7 @@
     font-size: 14px;
     background-color: #b59f5b;
     color: white;
+    text-decoration: none;
     text-transform: uppercase;
     align-items: center;
     justify-content: center;
@@ -785,10 +817,10 @@
   
   .socials-link {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background-repeat: no-repeat;
-    background-size: 15px;
+    background-size: 20px;
     background-position: center;
   }
   
@@ -841,39 +873,45 @@
     }
 
     .trend {
-      width: calc(50% - 10px);
+      width: calc(50% - 2.5px);
 
     }
 
-    @media (orientation: landscape) {
+    .trend:nth-child(n+2) {
+      margin-right: 0px;
+
+    }
+
+    /* @media (orientation: landscape) {
   
       .trend {
-        width: calc(23% - 5px);
+        width: calc(25% - 5px);
     
      }
-    }
+    } */
 
      .telo {
 
-      width: calc(100% - 40px);
+      width: calc(100% - 0px);
       justify-content: space-between;
       /* background-color: tomato;
        */
   }
     .mains-left {
 
-      width: calc(60% - 20px);
+      width: calc(100% - 290px);/*780px */
+      /* width: calc(60% - 20px); */
       /* background-color: violet; */
     }
 
     .colloum-right {
-
-      width: 40%;
+      width: 270px;
+      /* width: 40%; */
       /* background-color: violet; */
 
     }
 
-      .poster {
+    .poster {
 
       width: 100%;
       display: flex;
@@ -908,19 +946,25 @@
 
     }
   
-
-
     .katalog-bloks {
       display: flex;
       flex-wrap: wrap;
-      
+      justify-content:flex-start;
   }
 
     .products-blok {
 
-         width: 290px;
-         margin-bottom: 50px;
+          width: 290px; 
+         /* width: calc(40% - 40px); */
+         margin-right: 40px;
+       
+    }
 
+    .products-blok::before {
+      top: 50%;
+      height: 52% ;
+    /* top: 240px; */
+    /* height: calc(100% - 220px); */
     }
 
     .menu-list {
@@ -966,12 +1010,25 @@
     }
 
     .trend {
-      width: calc(100% - 5px);
+      width: calc(100%);
+      margin-left: 0px;
+      margin-right: 0px;
 
     }
 
+    @media (orientation: landscape) {
 
+      .trend {
+        width: calc(50% - 2.5px);
+    
+     }
 
+      .trend:nth-child(n+2) {
+        margin-right: 0px;
+
+      }
+
+    }
      
     .mains-left {
         width: 100%;
@@ -990,14 +1047,42 @@
     width: 100%;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
     }
+
+    .products-blok::before {
+      display: none;
+      /*    
+      top: calc(100% - 200px);
+      height: calc(100% - 430px);
+      min-height: 100px; */
+      }
+
 
     .products-img-size {
       width: 100%;
-
    
    }
+
+   .products-text-border {
+    position: relative;
+   }
+
+   .products-text-border::after { 
+    content: "";
+   display: flex;
+   position: absolute;
+   top: -50px;
+   left: -20px;
+   height: calc(100% + 80px);
+   /* min-height:  250px; */
+   width: calc(100% + 35px);
+   border: 3px solid #b59f5b;
+   z-index: -1;
+  
+}
+
+ 
 
 
    .poster {
@@ -1035,7 +1120,7 @@
   }
 
 
-  .h3-post {
+  .h2-post {
     font-size: 1rem;
   }
   .menu-list {
@@ -1122,13 +1207,7 @@
   }
 }
 
-@media (max-width: 640px) and (orientation: landscape) {
 
-  .trend {
-    width: calc(48% - 5px);
-
- }
-}
 
 
 .page {
