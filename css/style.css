@@ -882,13 +882,19 @@
 
     }
 
-    /* @media (orientation: landscape) {
-  
-      .trend {
-        width: calc(25% - 5px);
+      @media (orientation: landscape) {
     
-     }
-    } */
+        .trend {
+          width: calc(25% - 5px);
+      
+        }
+
+        .trend-h1-link {
+          font-size: 16px;
+        }
+
+
+      }
 
      .telo {
 
@@ -957,7 +963,7 @@
 
     .products-blok {
 
-           width: 280px; 
+           width: 230px; 
           /* width: 40%;  */
          /* width: calc(40% - 40px); */
          margin-right: 40px;
@@ -980,8 +986,8 @@
     .products-blok::before {
       /* display: none; */
       
-      top: calc(100% - 380px);
-      height: calc(100% - 200px);
+      top: calc(100% - 450px);
+      height: calc(100% - 180px);
       /* min-height: 100px; */ 
       }
 
@@ -1274,18 +1280,19 @@
   bottom: 0; */
   width: 100vw;
   height: 100vh;
+  /* max-height: 100vh; */
   z-index: 3;
 
 
-  display: none;
+  /* display: none; */
 }
 
 .form-svg-x {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   position: relative;
-  top: -50px;
-  right: -350px;
+  top: -55px;
+  right: -340px;
  }
 
 .form {
@@ -1294,10 +1301,13 @@
   flex-direction: column ;
   justify-content: space-between;
   width: 390px;
-  height: 600px;
+  height: 500px;
   background-color: white;
   padding: 20px;
 
+}
+.page .h2-post {
+  margin-top: -40px;
 }
 
 .form-group {
@@ -1357,6 +1367,7 @@
   height: 50px;
   width: 100%;
   background-color: #b69f5b;
+  color: white;
   border: #b69f5b;
   font-size: 14px;
   text-transform: uppercase;
@@ -1419,7 +1430,7 @@
   color:rgb(187, 186, 184);
   width: 100%;
   max-width: 100%;
-  max-height: 130px;
+  height: 120px;
   border: 1px solid #f3f7f6;
   background-color:#f3f7f6;
   padding:10px;
