@@ -1284,7 +1284,7 @@
   z-index: 3;
 
 
-  /* display: none; */
+  display: none;
 }
 
 .form-svg-x {
